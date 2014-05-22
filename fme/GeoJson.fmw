@@ -1,0 +1,993 @@
+#! <?xml version="1.0" encoding="iso-8859-1" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    "/Applications/FME 2014/Engine/fme" /Users/adhak/WebFolders/fmepedia-geojson-openlayers/fme/GeoJson.fmw
+#          --FEATURE_TYPES default_busstops
+#    
+#    
+#! PASSWORD=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! VIEW_POSITION="-33 0"
+#! SHOW_INFO_NODES="true"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! BEGIN_PYTHON=""
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! DESCRIPTION=""
+#! TITLE=""
+#! MAX_LOG_FEATURES="200"
+#! END_TCL=""
+#! FME_BUILD_NUM="14290"
+#! ZOOM_SCALE="100"
+#! CATEGORY=""
+#! REDIRECT_TERMINATORS="NONE"
+#! LEGAL_TERMS_CONDITIONS=""
+#! FME_REPROJECTION_ENGINE="FME"
+#! USAGE=""
+#! END_PYTHON=""
+#! HISTORY=""
+#! FME_DOCUMENT_PRIORGUID="7ce57540-e12b-11e3-8b75-eabe90daba2e,2a08526c-e139-11e3-868b-ef29a2102f65,312fcb6a-e1c5-11e3-8e1f-ba5f843bc51d"
+#! DOC_TOP_LEFT="100 -481"
+#! REQUIREMENTS_KEYWORD=""
+#! SOURCE_ROUTING_FILE=""
+#! DESTINATION_ROUTING_FILE=""
+#! DESTINATION="NONE"
+#! LAST_SAVE_DATE="2014-05-22T09:22:31"
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
+#! WORKSPACE_VERSION="1"
+#! SOURCE="NONE"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP1 (20140325 - Build 14290 - macosx)"
+#! FME_SERVER_SERVICES=""
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! LOG_FILE=""
+#! REQUIREMENTS=""
+#! BEGIN_TCL=""
+#! DOC_EXTENTS="962 306"
+#! FME_DOCUMENT_GUID="464b0566-e1cd-11e3-8174-944259b6df76"
+#! SHOW_ANNOTATIONS="true"
+#! IGNORE_READER_FAILURE="No"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="SPATIALITE"
+#! DATASET="data/Transit.sl3"
+#! KEYWORD="SPATIALITE_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="spatialite_type {FME_GEN_GEOMETRY}"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_text_size real(31,15) fme_rotation real(31,15) fme_feature_type string(50) multi_reader_keyword string(50) multi_reader_id integer fme_dataset string(50) multi_reader_full_id integer fme_geometry fme_char(50) multi_reader_type string(50) fme_fill_color string(50) fme_basename string(50) fme_text_string string(50) fme_secondary_axis real(31,15) fme_primary_axis real(31,15) fme_sweep_angle real(31,15) fme_start_angle real(31,15) spatialite_type string(255) fme_type string(50) fme_color string(50)"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="14290"
+#! MAX_FEATURES=""
+#! COORDSYS=""
+#! MIN_FEATURES=""
+#! FEATURE_TYPES="$(FEATURE_TYPES)"
+#! START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="SPATIALITE_OUT_ENCODING TRANSACTION_SIZE"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="GEOJSON"
+#! DATASET="$(DestDataset_GEOJSON)"
+#! KEYWORD="GEOJSON_1"
+#! MULTI_GEOM_ALLOWED="true"
+#! ATTR_MAX_LENGTH="600"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE=""
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_secondary_axis float fme_text_string string fme_fill_color string fme_dataset string fme_feature_type string fme_text_size float fme_start_angle float fme_type string fme_rotation float fme_geometry fme_char(50) fme_primary_axis float fme_sweep_angle float fme_basename string fme_color string"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="6538"
+#! FANOUT_PREFIX=""
+#! COORDSYS="EPSG:900913"
+#! FANOUT="No"
+#! FANOUT_SUFFIX=""
+#! FANOUT_ID_ATTR=""
+#! FANOUT_DIRECTORY=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE="application/json ADD_DISPOSITION"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string(255)"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="binary"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="real(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="time"
+#! FME_TYPE="fme_time"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_int32"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="real(20,0)"
+#! FME_TYPE="fme_int64"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="real(20,0)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_int16"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="real(15,7)"
+#! FME_TYPE="fme_real32"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="real(31,15)"
+#! FME_TYPE="fme_real64"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="real(10,0)"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="SPATIALITE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="boolean"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_time"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_date"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real64"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int32"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int16"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="object"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="array"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="object_or_array"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEOJSON"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_multi_point_xyz"
+#! FME_TYPE="fme_point"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_multi_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_point_xyz"
+#! FME_TYPE="fme_point"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_point_xyz"
+#! FME_TYPE="fme_text"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_multi_line_xyz"
+#! FME_TYPE="fme_line"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_multi_line"
+#! FME_TYPE="fme_line"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_line_xyz"
+#! FME_TYPE="fme_line"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_line"
+#! FME_TYPE="fme_line"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_line_xyz"
+#! FME_TYPE="fme_arc"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_line_xyz"
+#! FME_TYPE="fme_solid"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_line_xyz"
+#! FME_TYPE="fme_surface"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_multi_polygon_xyz"
+#! FME_TYPE="fme_area"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_multi_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_polygon_xyz"
+#! FME_TYPE="fme_area"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_polygon_xyz"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_polygon_xyz"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_polygon_xyz"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_polygon_xyz"
+#! FME_TYPE="fme_raster"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_polygon_xyz"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_geometry_collection_xyz"
+#! FME_TYPE="fme_collection"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_geometry_collection"
+#! FME_TYPE="fme_collection"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_geometry"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="wkb_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="SPATIALITE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_line"
+#! FME_TYPE="fme_line"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_text"
+#! FME_TYPE="fme_text"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_ellipse"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_arc"
+#! FME_TYPE="fme_arc"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_rectangle"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_rounded_rectangle"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_raster"
+#! FME_TYPE="fme_raster"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_no_geom"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_collection"
+#! FME_TYPE="fme_collection"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_line"
+#! FME_TYPE="fme_surface"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_line"
+#! FME_TYPE="fme_solid"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_polygon"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="GEOJSON"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="Default.BusRoutes"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="19"
+#! FEAT_GEOMTYPE="json_point"
+#! POSITION="1041 -175"
+#! ORDER="18"
+#! COLLAPSED="true"
+#! KEYWORD="GEOJSON_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="LINE_ID" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LINE_NAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYINDEX" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="Default.BusStops"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="7"
+#! FEAT_GEOMTYPE="json_point"
+#! POSITION="1062 -481"
+#! ORDER="19"
+#! COLLAPSED="true"
+#! KEYWORD="GEOJSON_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="ATSTREET" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BAY" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CORNER" ATTR_TYPE="float" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FACILITY_T" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GIS_ID" ATTR_TYPE="float" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ID" ATTR_TYPE="float" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ONSTREET" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PLACEMENT" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PRIMARYINDEX" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="STOPABBR" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="STOPNAME" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="default_busstops"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="3"
+#! FEAT_GEOMTYPE="wkb_point wkb_point_xyz wkb_line wkb_line_xyz wkb_polygon wkb_polygon_xyz wkb_geometry_collection wkb_geometry_collection_xyz wkb_multi_point wkb_multi_point_xyz wkb_multi_line wkb_multi_line_xyz wkb_multi_polygon wkb_multi_polygon_xyz"
+#! POSITION="100 -368"
+#! ORDER="5e+14"
+#! COLLAPSED="true"
+#! KEYWORD="SPATIALITE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="false"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="primaryindex" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="facility_t" ATTR_TYPE="string(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="bay" ATTR_TYPE="string(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="onstreet" ATTR_TYPE="string(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="stopname" ATTR_TYPE="string(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="stopabbr" ATTR_TYPE="string(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="placement" ATTR_TYPE="string(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="atstreet" ATTR_TYPE="string(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="corner" ATTR_TYPE="real(20,10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="gis_id" ATTR_TYPE="real(20,10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="id" ATTR_TYPE="real(20,10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="default_busroutes"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="4"
+#! FEAT_GEOMTYPE="wkb_point wkb_point_xyz wkb_line wkb_line_xyz wkb_polygon wkb_polygon_xyz wkb_geometry_collection wkb_geometry_collection_xyz wkb_multi_point wkb_multi_point_xyz wkb_multi_line wkb_multi_line_xyz wkb_multi_polygon wkb_multi_polygon_xyz"
+#! POSITION="100 -230"
+#! ORDER="5e+14"
+#! COLLAPSED="true"
+#! KEYWORD="SPATIALITE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="false"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="line_name" ATTR_TYPE="string(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="line_id" ATTR_TYPE="string(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="primaryindex" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <SERVICES>
+#! <SERVICE
+#! NAME="fmedatastreaming"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="ADVANCED"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="FAILURE_TOPICS"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="HTTP_DATASET"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="NOTIFICATION_WRITER"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="OUTPUT_WRITER"
+#! VALUE="GEOJSON_1"
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="SUCCESS_TOPICS"
+#! VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! <SERVICE
+#! NAME="fmejobsubmitter"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="ADVANCED"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="FAILURE_TOPICS"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="HTTP_DATASET"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="NOTIFICATION_WRITER"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="SUCCESS_TOPICS"
+#! VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! </SERVICES>
+#! <REPOSITORY
+#! NAME="Demos"
+#! />
+#! <ITEM
+#! NAME="GeoJson.fmw"
+#! />
+#! <MODIFICATIONS>
+#! <MODIFICATION
+#! DOCUMENT=""
+#! OWNER="DatasetMgr_SPATIALITE_1"
+#! NAME="SourceDataset_SPATIALITE_1"
+#! VALUE="/Users/adhak/Desktop/Migrations/REST-Playground/Transit.sl3"
+#! />
+#! </MODIFICATIONS>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL CHOICE FEATURE_TYPES default_busroutes%default_busstops Feature Types to Read:"
+#! DEFAULT_VALUE="default_busstops"
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI IGNORE FILENAME DestDataset_GEOJSON GeoJSON_Files(*.json)|*.json|All_Files|*.* Destination GeoJSON File:"
+#! DEFAULT_VALUE="c:\temp\out.json"
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="5"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="19"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="6"
+#! SOURCE_NODE="3"
+#! TARGET_NODE="7"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_SPATIALITE_1,SPATIALITE_IN_ENCODING_SPATIALITE_1,SPATIALITE_IN_EXPOSE_ATTRS_GROUP_SPATIALITE_1,SPATIALITE_IN_NETWORK_AUTHENTICATION_SPATIALITE_1,SPATIALITE_IN_NETWORK_PROXY_SPATIALITE_1,DestDataset_GEOJSON_1,GEOJSON_OUT_WRITER_CHARSET_GEOJSON_1,GEOJSON_OUT_WRITE_BOM_GEOJSON_1,GEOJSON_OUT_WRITE_NULL_ATTRIBUTE_VALUES_GEOJSON_1,GEOJSON_OUT_STRICT_SPEC_GEOJSON_1,GEOJSON_OUT_JSONP_FUNC_NAME_GEOJSON_1
+DEFAULT_MACRO FEATURE_TYPES default_busstops
+GUI OPTIONAL CHOICE FEATURE_TYPES default_busroutes%default_busstops Feature Types to Read:
+DEFAULT_MACRO DestDataset_GEOJSON c:\temp\out.json
+GUI IGNORE FILENAME DestDataset_GEOJSON GeoJSON_Files(*.json)|*.json|All_Files|*.* Destination GeoJSON File:
+INCLUDE [ if {{$(DestDataset_GEOJSON)} == {}} { puts_real {Parameter 'DestDataset_GEOJSON' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! WORKSPACE_VERSION 1
+# ============================================================================ 
+# 
+# This mapping file was generated by FME Workbench
+# on 01/02/12 14:43:59 for translation between SHAPE and GEOJSON
+# 
+# This workspace was generated with FME build 6538
+#
+# You may edit this mapping file to customize its operation.  Comments are 
+# placed throughout to assist you. 
+# 
+# Modification History:
+# 
+#     Name              Date     Description
+#     ================= ======== =============================================
+# 
+# 
+# ============================================================================ 
+# ============================================================================ 
+# The following line defines the title presented to the user when this
+# mapping file is run through the FME GUI.  You may modify this
+# if a more meaningful title would be appropriate.
+GUI TITLE SHAPE to GEOJSON Translation 
+# ============================================================================ 
+# The following line names the log file to which useful statistics about
+# the translation will be written.  This line can be uncommented and
+# updated if you do wish to keep these statistics.
+# LOG_FILENAME translation.log
+# LOG_APPEND NO
+# ============================================================================ 
+# The following line instructs the FME to log any features that do not
+# match any of the source feature patterns listed further down in
+# this file.  If you are modifying this mapping file, this will be
+# useful to describe to you exactly which features you are losing
+# during translation, if the statistics indicate that features are
+# not being correlated or grouped.  Uncorrelated features do not
+# match any source specification, ungrouped features do not have
+# any corresponding _DEF line. 
+# FME_DEBUG UNGROUPED UNCORRELATED
+# ============================================================================ 
+# The following two lines define the type of reader and writer to be
+# used for this translation.  If you want to translate your data
+# back into its original format, you may make a copy of this file
+# and switch the reader and writer types.  If you rerun the FME, you
+# will get your original data back again (together with any modifications
+# you made in the meantime).  Note that several formats are NOT
+# bi-directional (for example, GIF can only be used as a WRITER)
+# so a reverse translation may not always be possible.
+#! START_WB_HEADER
+READER_TYPE SPATIALITE
+READER_KEYWORD SPATIALITE_1
+READER_GEN_DIRECTIVES EXPOSE_ATTRS_GROUP,,SPATIALITE_EXPOSE_FORMAT_ATTRS,,TABLELIST,,_MERGE_SCHEMAS,YES,ENCODING,
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} GEOJSON
+MULTI_WRITER_KEYWORD{0} GEOJSON_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "SPATIALITE_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER SPATIALITE SPATIALITE_1
+# ============================================================================
+# The following GUI line prompts for a directory to be used as the
+# source of the SpatiaLite databases.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_SPATIALITE_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER SPATIALITE SPATIALITE_1
+DEFAULT_MACRO SourceDataset_SPATIALITE_1 data/Transit.sl3
+GUI MULTIFILE SourceDataset_SPATIALITE_1 SpatiaLite_Database_Files(*.sl3;*.db;*.sqlite)|*.sl3;*.db;*.sqlite|SpatiaLite_Database_Files(*.sl3)|*.sl3|SpatiaLite_Database_Files(*.db)|*.db|SpatiaLite_Database_Files(*.sqlite)|*.sqlite|All_files(*.*)|*.* Source SpatiaLite Database File(s):
+DEFAULT_MACRO SPATIALITE_IN_ENCODING_SPATIALITE_1 
+SPATIALITE_1_ENCODING "$(SPATIALITE_IN_ENCODING_SPATIALITE_1)"
+GUI OPTIONAL ENCODING SPATIALITE_IN_ENCODING_SPATIALITE_1 * Character Encoding:
+DEFAULT_MACRO SPATIALITE_IN_EXPOSE_ATTRS_GROUP_SPATIALITE_1 
+SPATIALITE_1_EXPOSE_ATTRS_GROUP "$(SPATIALITE_IN_EXPOSE_ATTRS_GROUP_SPATIALITE_1)"
+GUI DISCLOSUREGROUP SPATIALITE_IN_EXPOSE_ATTRS_GROUP_SPATIALITE_1 SPATIALITE_EXPOSE_FORMAT_ATTRS Schema Attributes
+# ===========================================================================
+DEFAULT_MACRO SPATIALITE_IN_NETWORK_AUTHENTICATION_SPATIALITE_1 
+SPATIALITE_1_NETWORK_AUTHENTICATION "$(SPATIALITE_IN_NETWORK_AUTHENTICATION_SPATIALITE_1)"
+GUI OPTIONAL AUTHENTICATOR SPATIALITE_IN_NETWORK_AUTHENTICATION_SPATIALITE_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ===========================================================================
+DEFAULT_MACRO SPATIALITE_IN_NETWORK_PROXY_SPATIALITE_1 
+SPATIALITE_1_NETWORK_PROXY "$(SPATIALITE_IN_NETWORK_PROXY_SPATIALITE_1)"
+GUI OPTIONAL AUTHENTICATOR SPATIALITE_IN_NETWORK_PROXY_SPATIALITE_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Proxy"%PROMPT_TYPE%PROXY Network Proxy
+SPATIALITE_1_DATASET "$(SourceDataset_SPATIALITE_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GEOJSON_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER GEOJSON GEOJSON_1
+# The dataset this mapping file was generated for was:
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_GEOJSON_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER GEOJSON GEOJSON_1
+DEFAULT_MACRO DestDataset_GEOJSON_1 $(DestDataset_GEOJSON)
+GUI FILENAME DestDataset_GEOJSON_1 GeoJSON_Files(*.json)|*.json|All_Files|*.* Destination GeoJSON File:
+DEFAULT_MACRO GEOJSON_OUT_WRITER_CHARSET_GEOJSON_1 UTF-8
+GEOJSON_1_WRITER_CHARSET "$(GEOJSON_OUT_WRITER_CHARSET_GEOJSON_1)"
+GUI CHOICE GEOJSON_OUT_WRITER_CHARSET_GEOJSON_1 UTF-8%UTF-16%UTF-16BE%UTF-16LE%UTF-32%UTF-32BE%UTF-32LE Output Character Set:
+DEFAULT_MACRO GEOJSON_OUT_WRITE_BOM_GEOJSON_1 No
+GEOJSON_1_WRITE_BOM "$(GEOJSON_OUT_WRITE_BOM_GEOJSON_1)"
+GUI CHOICE GEOJSON_OUT_WRITE_BOM_GEOJSON_1 Yes%No Byte Order Marker:
+DEFAULT_MACRO GEOJSON_OUT_WRITE_NULL_ATTRIBUTE_VALUES_GEOJSON_1 No
+GEOJSON_1_WRITE_NULL_ATTRIBUTE_VALUES "$(GEOJSON_OUT_WRITE_NULL_ATTRIBUTE_VALUES_GEOJSON_1)"
+GUI CHOICE GEOJSON_OUT_WRITE_NULL_ATTRIBUTE_VALUES_GEOJSON_1 Yes%No Write 'null' for Attributes with No Value:
+DEFAULT_MACRO GEOJSON_OUT_STRICT_SPEC_GEOJSON_1 Yes
+GEOJSON_1_STRICT_SPEC "$(GEOJSON_OUT_STRICT_SPEC_GEOJSON_1)"
+GUI CHOICE GEOJSON_OUT_STRICT_SPEC_GEOJSON_1 Yes%No Fully Conform to the GeoJSON Grammar:
+DEFAULT_MACRO GEOJSON_OUT_JSONP_FUNC_NAME_GEOJSON_1 
+GEOJSON_1_JSONP_FUNC_NAME "$(GEOJSON_OUT_JSONP_FUNC_NAME_GEOJSON_1)"
+GUI OPTIONAL TEXT GEOJSON_OUT_JSONP_FUNC_NAME_GEOJSON_1 JSONP Function Name (optional):
+GEOJSON_1_DATASET "$(DestDataset_GEOJSON_1)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)GeoJson.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Datum
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_SPATIALITE_1 SPATIALITE_1
+DEFAULT_MACRO DATASET_KEYWORD_GEOJSON_1 GEOJSON_1
+# -------------------------------------------------------------------------
+
+SPATIALITE_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+SPATIALITE_1_FEATURE_TYPES $(FEATURE_TYPES)
+GEOJSON_1_COORDINATE_SYSTEM EPSG:900913
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME GeoJson
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+# -------------------------------------------------------------------------
+SPATIALITE_1_DEF default_busroutes   spatialite_type              "wkb_point wkb_point_xyz wkb_line wkb_line_xyz wkb_polygon wkb_polygon_xyz wkb_geometry_collection wkb_geometry_collection_xyz wkb_multi_point wkb_multi_point_xyz wkb_multi_line wkb_multi_line_xyz wkb_multi_polygon wkb_multi_polygon_xyz"   line_name                    string(255)   line_id                      string(255)   primaryindex                 integer
+# -------------------------------------------------------------------------
+SPATIALITE_1_DEF default_busstops   spatialite_type              "wkb_point wkb_point_xyz wkb_line wkb_line_xyz wkb_polygon wkb_polygon_xyz wkb_geometry_collection wkb_geometry_collection_xyz wkb_multi_point wkb_multi_point_xyz wkb_multi_line wkb_multi_line_xyz wkb_multi_polygon wkb_multi_polygon_xyz"   primaryindex                 integer   facility_t                   string(255)   bay                          string(255)   onstreet                     string(255)   stopname                     string(255)   stopabbr                     string(255)   placement                    string(255)   atstreet                     string(255)   corner                       real(20,10)   gis_id                       real(20,10)   id                           real(20,10)
+
+# -------------------------------------------------------------------------
+
+Lookup ___KnownFeatureTypes___   default_busstops yes   default_busroutes yes   "" no
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Unexpected Input Remover"   INPUT FEATURE_TYPE *   TEST @Lookup(___KnownFeatureTypes___,@FeatureType()) == yes   OUTPUT PASSED FEATURE_TYPE *
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Source -> Generic"    INPUT FEATURE_TYPE *    OUTPUT FEATURE_TYPE *       @Transform(SPATIALITE,FME_GENERIC,ALIAS_GEOMETRY)
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "default_busstops -> Default.BusStops Correlator"    INPUT FEATURE_TYPE default_busstops    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Reproject("EPSG:900913","EPSG:900913")       @Transform(FME_GENERIC,GEOJSON)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,Default.BusStops)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "default_busroutes -> Default.BusRoutes Correlator"    INPUT FEATURE_TYPE default_busroutes    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Reproject("EPSG:900913","EPSG:900913")       @Transform(FME_GENERIC,GEOJSON)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,Default.BusRoutes)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Final Output Feature Type Router"   INPUT FEATURE_TYPE *   TEST @Value(__wb_out_feat_type__) != ""   OUTPUT PASSED FEATURE_TYPE *     @FeatureType(@Value(__wb_out_feat_type__))   OUTPUT FAILED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+GEOJSON_1_DEF Default.BusStops   ATSTREET                     string   BAY                          string   CORNER                       float   FACILITY_T                   string   GIS_ID                       float   ID                           float   ONSTREET                     string   PLACEMENT                    string   PRIMARYINDEX                 int   STOPABBR                     string   STOPNAME                     string
+# -------------------------------------------------------------------------
+GEOJSON_1_DEF Default.BusRoutes   LINE_ID                      string   LINE_NAME                    string   PRIMARYINDEX                 int
