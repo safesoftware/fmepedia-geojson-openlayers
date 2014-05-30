@@ -84,7 +84,7 @@
           // Parameter in this case which layer: ?FEATURE_TYPES=Default.BusRoutes
 
           fmes.customRequest(
-            "http://fmepedia2014-safe-software.fmecloud.com/fmedatastreaming/Demos/GeoJson.fmw?FEATURE_TYPES=default_busroutes", "GET",
+            "https://fmepedia2014-safe-software.fmecloud.com/fmedatastreaming/Demos/GeoJson.fmw?FEATURE_TYPES=default_busroutes", "GET",
             function(json){
               busRoutes = format.read(JSON.stringify(json));
               routeVector.addFeatures(busRoutes);
@@ -92,7 +92,7 @@
           );
 
           fmes.customRequest(
-            "http://fmepedia2014-safe-software.fmecloud.com/fmedatastreaming/Demos/GeoJson.fmw?FEATURE_TYPES=default_busstops", "GET",
+            "https://fmepedia2014-safe-software.fmecloud.com/fmedatastreaming/Demos/GeoJson.fmw?FEATURE_TYPES=default_busstops", "GET",
             function(json){
               busStops = format.read(JSON.stringify(json));
               stopVector.addFeatures(busStops);
