@@ -3,18 +3,18 @@
   <title>OpenLayers Example</title>
     <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
     <!-- FMEServer Javascript API -->
-    <script src="http://api.fmeserver.com/js/v1/FMEServer.min.js" type="text/javascript"></script>
+    <script src="http://api.fmeserver.com/js/v1.1/FMEServer.js" type="text/javascript"></script>
     </head>
     <body>
       <div style="width:100%; height:100%" id="map"></div>
       <script type="text/javascript">
-        var map, fmes, routeVector, stopVector, format;
+        var map, routeVector, stopVector, format;
         var fromProjection, toProjection;
         var busRoutes, busStops;
 
         window.onload = function() {
-          // Create a new FME Server Connection Object
-          fmes = new FMEServer({
+          // Initialize the FME Server Connection Object
+          FMEServer.init({
             server : "https://fmepedia2014-safe-software.fmecloud.com",
             token : "fb1c3ee6828e6814c75512dd4770a02e73d913b8"
           });
@@ -83,7 +83,7 @@
           // the workspace name: GeoJson.fmw
           // Parameter in this case which layer: ?FEATURE_TYPES=Default.BusRoutes
 
-          fmes.customRequest(
+          FMEServer.customRequest(
             "https://fmepedia2014-safe-software.fmecloud.com/fmedatastreaming/Demos/GeoJson.fmw?FEATURE_TYPES=default_busroutes", "GET",
             function(json){
               busRoutes = format.read(JSON.stringify(json));
@@ -91,7 +91,7 @@
             }
           );
 
-          fmes.customRequest(
+          FMEServer.customRequest(
             "https://fmepedia2014-safe-software.fmecloud.com/fmedatastreaming/Demos/GeoJson.fmw?FEATURE_TYPES=default_busstops", "GET",
             function(json){
               busStops = format.read(JSON.stringify(json));
